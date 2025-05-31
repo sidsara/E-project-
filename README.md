@@ -26,5 +26,5 @@ Application web pour la gestion de projets pluridisciplinaires et PFEs.
  — Messagerie interne.
  — Notifications automatiques.
  — Partage de documents.
-#Remarque
+# Remarque
 La partie frontend de la phase de soutenance n'a pas encore été implementée 
