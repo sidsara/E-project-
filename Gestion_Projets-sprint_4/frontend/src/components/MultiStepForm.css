@@ -1,0 +1,350 @@
+.form-wrapper {
+    max-width: 1000px;
+    margin: 9%;
+    padding: 2rem;
+    font-family: 'Inria Sans', sans-serif;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .stepper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
+  
+  .step {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #ccc;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+  .step.active {
+    background: #FF6600;
+  }
+  
+  .line {
+    width: 300px;
+    height: 2px;
+    background: #E7E8EB;
+  }
+  
+  .line.active {
+    background: #FF6600;
+  }
+  
+  .form-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .form-content h2 {
+    color: #FF6600;
+    margin-bottom: -2rem;
+    font-size: 14px;
+  }
+  
+  .form-content p {
+    color: #112B3C;
+    font-size: 20px;
+    margin-bottom: -0.2rem;
+  }
+  
+  .form-content label {
+    display: block;
+    margin-top: 0.5rem;
+    margin-bottom: 0.3rem;
+    color: #205375;
+    font-weight: 600;
+  }
+  
+ .form-content input, textarea, select {
+    font-family: 'Inria Sans', sans-serif;
+    font-size: 16px;
+    border: 1px solid #edeeee;
+    border-radius: 8px;
+    background: #edeeee;
+    padding-left: 15px;
+    min-height: 40px;
+    resize: none;
+  }
+  
+  textarea {
+    padding-top: 10px;
+    min-height: 70px;
+    resize: vertical;
+  }
+  
+  select {
+    width: 100%;
+    padding: 0.6rem;
+  }
+  
+  .form-content input:focus, textarea:focus, select:focus {
+    outline: none;
+        border-color: rgba(255, 96, 0, 0.4);
+        box-shadow: 0 0 0 4px rgba(255, 96, 0, 0.1);
+  }
+  
+  .btn-primary, .btn-outline {
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 32px;
+    cursor: pointer;
+    margin-top: 1rem;
+    font-size: 14px;
+    font-weight: 600;
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+  
+  .btn-primary {
+    background: #FF6600;
+    color: white;
+  }
+  
+  .btn-primary:hover {
+    background: #FF6600;
+  }
+  
+  .btn-outline {
+    border: 2px solid #FF6600;
+    color: #f97316;
+    background: white;
+  }
+  
+  .btn-outline:hover {
+    background: #FF6600;
+    color: white;
+  }
+  
+  .form-success {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .form-success h2 {
+    color: #f97316;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+  }
+  .form-success svg{
+    margin-bottom: 1rem;
+  }
+  .team-arborescence {
+    position: relative;
+    margin-left: 40px;
+    margin-top: 20px;
+  }
+  
+  .member-node {
+    position: relative;
+    margin-bottom: 20px;
+  }
+  
+  .member-line {
+    position: absolute;
+    top: 65%;
+    left: -20px;
+    width: 40px;
+    height: 2px;
+    background: #FF6600;
+  }
+  
+  .member-line::after {
+    content: "";
+    position: absolute;
+    top: -4400%;
+    left: 0;
+    width: 2px;
+    height: 90px;
+    background: #FF6600;
+    transform: translateX(0px);
+  }
+  
+  .top-circle {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #FF6600;
+    position: absolute;
+    top: -38px;
+    left: -2.3%;
+    transform: translateX(-50%);
+  }
+  
+  .member-node::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #FF6600;
+    position: absolute;
+    top: 66%;
+    left: 10.5px;
+    transform: translateY(-50%);
+  }
+  
+  .member-input {
+    margin-left: 20px;
+  }
+  
+  .member-input label {
+    font-weight: bold;
+  }
+  
+  .member-email-input {
+    width: 400px;
+  }
+  
+  .custom-file-input {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: 40px;
+    cursor: pointer;
+    border: 1px solid #edeeee;
+    border-radius: 8px;
+    background: #edeeee;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .custom-file-input input[type="text"] {
+    width: 100%;
+    padding: 0.6rem;
+    padding-right: 40px;
+    font-family: 'Inria Sans', sans-serif;
+    font-size: 16px;
+    border: none;
+    background: transparent;
+    outline: none;
+    min-height: 25px;
+    line-height: 1.5;
+    pointer-events: none;
+  }
+  
+  .custom-file-input input[type="file"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  .attach-icon {
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 26px;
+    height: 26px;
+    color: #205375;
+    transition: color 0.3s ease;
+  }
+  
+  .attach-icon:hover {
+    color: #FF6600;
+  }
+  
+  .dropdown-container {
+    position: relative;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  
+  .dropdown-button {
+    width: 96.5%;
+    padding: 0.8rem;
+    font-family: 'Inria Sans', sans-serif;
+    font-size: 16px;
+    border: 1px solid #edeeee;
+    border-radius: 8px;
+    background: #edeeee;
+    color: #000000;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .dropdown-button.disabled {
+    background-color: #f5f5f5;
+    cursor: not-allowed;
+    color: #999999;
+  }
+  
+  .dropdown-arrow {
+    font-size: 14px;
+    color: #205375;
+  }
+  
+  .dropdown-list {
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    background: #edeeee;
+    border: 1px solid #edeeee;
+    border-radius: 8px;
+    margin-top: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+  }
+  
+  .dropdown-item {
+    padding: 0.8rem;
+    cursor: pointer;
+    color: #112B3C;
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .dropdown-item:hover {
+    background: #FF6600;
+    opacity: 30%;
+    color: white;
+  }
+  
+  .dropdown-item.selected {
+    background: #FF6600;
+    color: white;
+    opacity: 30%;
+  }
+  
+  .selected-indicator {
+    width: 8px;
+    height: 8px;
+    background: #FF6600;
+    border-radius: 2px;
+    margin-left: 10px;
+  }
+  
+  .buttons {
+    display: flex;
+    justify-content: flex-end; 
+    gap: 1rem; 
+    margin-top: 1rem;
+  }
+  
+  @media (max-width: 768px) {
+    .member-email-input {
+      width: 100%;
+    }
+  }

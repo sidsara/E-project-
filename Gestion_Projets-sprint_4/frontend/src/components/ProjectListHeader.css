@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+.projectlistheader{
+    height: 35px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.projectlistheader ul{
+    display: flex;
+    list-style: none;
+    font-family:"Inria Sans", serif ;
+    color: #999999;
+    width: 92%;
+}
+.projectlistheader .titleheader{
+    width: 40%;
+}
+.projectlistheader .descriptionheader{
+    width: 36%;
+}
+.projectlistheader .otherheader{
+    width: 12%;
+}
+
+
+

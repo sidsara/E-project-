@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #EFEFEF;
+}
+.homecontent img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s;
+    position: absolute; /* Ensures it doesn't overlap navbar */
+    z-index: -1;
+    filter: blur(5px);
+}
+.homecontent {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    position: relative;
+}
+.homecontent .description {
+    display: flex;
+    width: 92%;
+    height: 82%;
+    justify-content: center;
+    flex-direction: column;
+    font-family:"Inria Sans", serif ;
+}
+.description h1{
+    font-size: 70px;
+    color: #112B3C;
+    margin-bottom: 20px;
+    padding-top: 80px;
+}
+.description p{
+    font-size: 25px;
+    color: #205375;
+    margin: 2px;
+}
+.readme{
+    height: 20%;
+    width: 25%;
+    display: flex;
+    align-items: center;
+}
+.description button{
+    color: #EFEFEF;
+    background-color: #FF6600;
+    border-radius: 50px;
+    height: 68px;
+    width: 205px;
+    margin: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0px 6px 4px rgba(0, 0, 0, 0.253);
+    border: 2px solid #FF6600;
+    transition: 0.4s ease;
+}
+.description button:hover{
+    background-color: transparent;
+    color: #EFEFEF;
+    border: 2px solid #EFEFEF;
+}
+.nemberusers{
+    width: 90vw;
+    padding: 0vw 5vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 40vh;
+}
+.nemberusers .usernumber{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    height: 100%;
+    font-family:"Inria Sans", serif ;
+    margin: 20px;
+   
+}
+.usernumber label{
+    font-size: 40px;
+    color: #FF6600;
+    margin: 30px;
+}
+.usernumber span{
+    font-size: 40px;
+    color: #205375;
+}
+.linewrapper{
+    width: 100vw;
+    height: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.orangeline{
+    height: 1px;
+    background-color: #FF6600;
+    width: 85%;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.457);
+}
+.areyou{
+    width:100vw;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.areyou .areyoucontent{
+    display: flex;
+    width: 85vw;
+    align-items: center;
+    font-family:"Inria Sans", serif ;
+    font-size: 35px;
+    
+}
+.areyou .areyoucontent span{
+    color: #112B3C;
+    margin-right: 30px;
+}
+.areyou .areyoucontent p{
+    margin-left: 30px;
+    color: #205375;
+}
+
+.userwrapper{
+    width: 90vw;
+    padding: 0vw 5vw;
+    height: 65vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.userwrapper .usercontent{
+    width: 40vw;
+    padding: 0px 40px;
+    height: 84%;
+}
+.phrase{
+    display: flex;
+    width: 100%;
+    height: 28%;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.phrase p{
+    color: #205375;
+    font-size: 35px;
+}
+.phrase1{
+    display: flex;
+    width: 100%;
+    height: 20%;
+    align-items: center;
+    margin: 10px 0px;
+}
+.phrase1 p{
+    color: #205375;
+    font-size: 35px;
+}

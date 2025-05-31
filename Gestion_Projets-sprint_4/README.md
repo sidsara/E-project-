@@ -1,0 +1,6 @@
+# Gestion_Projets
+Application Full Web pour la gestion des projets à l'ESI de Sidi Bel Abbès
+# the function of delete a team
+une fonction deleteEquipe dans equipeController.js qui permettra au chef d'équipe de supprimer son équipe. La fonction vérifiera que l'utilisateur est bien le chef d'équipe actuel, supprimera toutes les invitations associées à l'équipe, mettra à jour le statut des membres pour qu'ils ne soient plus liés à une équipe, et enfin supprimera l'équipe elle-même. La fonction inclura des validations appropriées et des messages de confirmation clairs .
+# defference between getTeams and getTeamsForAdmin
+la différence principale entre getTeams et getTeamsForAdmin réside dans leur niveau d'accès(ya3ni yataffichawlah ghu li kima niveaux t3h ) et les informations retournées. getTeams est accessible à tous les utilisateurs authentifiés et retourne les informations de base des équipes comme les membres, le chef d'équipe et le statut. getTeamsForAdmin est protégé par le middleware isAdmin et retourne des informations plus détaillées incluant les statistiques globales, l'historique des modifications et des informations sensibles sur les équipes. De plus, getTeamsForAdmin permet le filtrage et le tri des équipes selon différents critères administratifs

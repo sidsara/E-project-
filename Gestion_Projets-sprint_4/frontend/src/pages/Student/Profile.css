@@ -1,0 +1,347 @@
+@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+.adminwrapper .profilewrapper{
+    background-color: #EFEFEF;
+    height: 97vh;
+    width: 98%;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    scrollbar-color: #112b3c #ddd; /* Thumb color, Track color */
+    scrollbar-width: thin;
+  /* Enable scrolling when content overflows */
+  overflow-y: auto;
+  scrollbar-width: thin; /* For Firefox */
+  -ms-overflow-style: none; /* Hide scrollbar for IE/Edge */
+}
+.adminwrapper .adwrapper .profilewrapper{
+    min-height: 93vh;
+}
+
+.adminwrapper .profilewrapper::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for Chrome/Safari */
+}
+/* Scrollbar Styling for Webkit Browsers (Chrome, Safari) */
+.adminwrapper .profilewrapper::-webkit-scrollbar {
+    width: 6px; /* Thin scrollbar */
+}
+
+/* Scrollbar Track */
+.adminwrapper .profilewrapper::-webkit-scrollbar-track {
+    background: #ddd; /* Light grey background */
+    border-radius: 10px;
+}
+
+/* Scrollbar Thumb (the draggable part) */
+.adminwrapper .profilewrapper::-webkit-scrollbar-thumb {
+    background: #112b3c; /* Dark blue thumb */
+    border-radius: 10px;
+}
+
+/* Scrollbar Thumb on Hover */
+.adminwrapper .profilewrapper::-webkit-scrollbar-thumb:hover {
+    background: #0d1e2a; /* Darker blue for hover effect */
+}
+.adminwrapper .profilewrapper .pagename{
+    color: #112b3c;
+    font-size: 32px;
+    font-family:"Inria Sans", serif ;
+
+}
+.profile-banner {
+    height: 180px;
+    background: linear-gradient(to right, #ff8c5a, #205375);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+  
+  
+  .profile-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0 2rem;
+    flex-wrap: wrap;
+  }
+  
+  .profile-left {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .profile-photo {
+    width: 130px;
+    height: 130px;
+    margin-top: -70px;
+    margin-left: 6vw;
+    border-radius: 999px;
+    border: 8px solid #EFEFEF;
+    object-fit: cover;
+  }
+  
+  .profile-name {
+    font-size: 1.5rem;
+    font-family:"Inria Sans", serif ;
+    margin: 0;
+    color: #112b3c;
+    margin-left: 4vw;
+  }
+  
+  .profile-status {
+    font-family:"Inria Sans", serif ;
+    color: #ff6600;
+    margin-left: 4vw;
+    margin-top: 10px;
+    margin-bottom: 0;
+  }
+  .profile-feild{
+    font-family:"Inria Sans", serif ;
+    color: #205375;
+    margin-left: 4vw;
+    margin-top: 0;
+    margin-bottom: 10px; 
+  }
+  .skills-label {
+    font-family:"Inria Sans", serif ;
+    font-size: 17px;
+    color: #112b3c;
+    margin: 20px 4vw 15px;
+  }
+  
+  .skills-list {
+    font-family:"Inria Sans", serif ;
+    display: flex;
+    gap: 0.5rem;
+    max-width: 22vw;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  #list1{
+    margin-left: 3.5vw;
+
+  }
+  
+  .skill-badge {
+    padding: 5px 10px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    font-size: 0.85rem;
+  }
+  .no-skill-badge {
+    background-color: #22527528;
+    color: #112b3c;
+    padding: 5px 10px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    font-size: 0.85rem;
+    width: 100%;
+    margin-right: 50px;
+  }
+  .skill-badge svg{
+    margin-left: 5px;
+  }
+  
+  .profile-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 1rem;
+    flex: 1;
+  }
+  
+  .edit-btn {
+    font-family:"Inria Sans", serif ;
+    background-color: #ff6600;
+    color: white;
+    height: 45px;
+    font-size: 17px;
+    width: 160px;
+    border: none;
+    padding: 0.6rem 1.5rem;
+    border-radius: 40px;
+    cursor: pointer;
+    font-weight: bold;
+    align-self: flex-end;
+    transition: 0.5s ease;
+  }
+  .edit-btn:hover{
+    transform: scale(1.02);
+  }
+  
+  .current-role p {
+    font-size: 1rem;
+    display: flex;
+    color: #333;
+    align-items: center;
+    font-family:"Inria Sans", serif ;
+    margin: 0;
+  }
+  .current-role svg{
+    margin-left: 10px;
+  }
+  
+  .current-role span {
+    font-family:"Inria Sans", serif ;
+    color: #205375bd;
+    font-weight: 500;
+    font-size: 0.95rem;
+  }
+  
+  .info-cards {
+    font-family:"Inria Sans", serif ;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 4rem;
+    gap: 5rem;
+    padding: 0 5rem;
+    flex-wrap: wrap;
+  }
+  
+  .info-card {
+    background-color: #E7E8EB;
+    border-radius: 15px;
+    font-family:"Inria Sans", serif ;
+    padding: 1.5rem;
+    flex: 1;
+    min-width: 250px;
+    position: relative;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  }
+  
+  .card-title {
+    font-family:"Inria Sans", serif ;
+    font-weight: bold;
+    color: #112b3c;
+    font-size: 1.2rem;
+    width: auto;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+  }
+  .card-title svg{
+    margin-left: 50px;
+  }
+  
+  .info-card p{
+    color: #205375;
+  }
+  
+  .arrow {
+    position: absolute;
+    right: 2rem;
+    bottom: 2rem;
+    font-size: 1.5rem;
+  }
+  .return{
+    cursor: pointer;
+    margin-right: 5vw;
+  }
+  .editform{
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  .editprofile{
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+
+  }
+  .editprofile label{
+    font-family:"Inria Sans", serif ;
+    color: #112b3c;
+    margin-left: 0.5rem;
+    margin-bottom: 10px;
+  }
+
+    .editprofile input{
+        background-color: #E7E8EB;
+        color: #112b3c;
+        border: 2px solid transparent;
+        border-radius: 8px 0 0 8px;
+        height: 40px;
+        padding: 0 1rem;
+        width: 16vw;
+    }
+    .editprofile input::placeholder{
+        color: #999999;
+        font-family:"Inria Sans", serif;
+        margin-left: 1rem;
+    
+    
+    }
+    .editprofile input:hover,.editprofile input:focus{
+        outline: none;
+        border-color: rgba(255, 96, 0, 0.4);
+        box-shadow: 0 0 0 4px rgba(255, 96, 0, 0.1);
+    }
+    .bn{
+        width: 22vw;
+        display: flex;
+        margin: 40px 0;
+        justify-content: space-around;
+    }
+    .bn button{
+        font-family:"Inria Sans", serif;
+        height: 40px;
+        width: auto;
+        font-size: 17px;
+        border-radius: 50px ;
+        padding: 0 1.5rem;
+
+    }
+    .bn .save{
+        background-color: #ff6600;
+        border: none;
+        color: #EFEFEF;
+        cursor: pointer;
+    }
+    .addskill{
+        display: flex;
+        align-items: center;
+        height: auto;
+        margin-bottom: 20px;
+    }
+    .addskill button{
+      width: 4vw;
+    height: 43px;
+    background-color: #ff6600;
+    border:none;
+    border-radius: 0 8px 8px 0;
+    font-family:"Inria Sans", serif;
+    color: #EFEFEF;
+    font-size: 1rem;
+    cursor: pointer;
+    }
+    .changepfp{
+        cursor: pointer;
+        margin-left: 13.7vw;
+        position: absolute;
+        top:205px;
+    }
+    .join-butn{
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      height: auto;
+    }
+    .join-butn button{
+      background-color: #ff6600;
+      color: #EFEFEF;
+      font-family:"Inria Sans", serif;
+      font-size: 17px;
+      margin-top: 20px;
+      border: none;
+      padding: 0.6rem 1.5rem;
+      border-radius: 40px;
+      cursor: pointer;
+      transition: 0.5s ease;
+    }
+    .join-butn button:hover{
+      transform: scale(1.02);
+    }

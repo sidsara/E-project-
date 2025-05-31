@@ -1,0 +1,53 @@
+.affect-student-to-team {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.affect-student-to-team h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.affect-student-to-team form {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+
+.affect-student-to-team label {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.affect-student-to-team input {
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.affect-student-to-team button {
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.affect-student-to-team button:hover {
+  background-color: #0056b3;
+}
+
+.success-message {
+  color: green;
+  margin-bottom: 10px;
+}
+
+.error-message {
+  color: red;
+  margin-bottom: 10px;
+}

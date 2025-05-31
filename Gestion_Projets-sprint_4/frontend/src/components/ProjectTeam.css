@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+.team-card {
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-radius: 16px;
+    padding: 10px;
+    width: 300px;
+    font-family:"Inria Sans", serif;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.03);
+    background-color: rgba(255, 102, 0, 0.1);
+  }
+  
+  .start-tracking-btn {
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.03);
+    background-color: rgba(255, 102, 0, 0.1);
+    color: #ff6600;
+    font-weight: bold;
+    font-family:"Inria Sans", serif ;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 12px;
+    width: 100%;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 2px;
+  }
+  .start-tracking-btn svg {
+    margin-left: 20px;
+  }
+  
+  .start-tracking-btn:hover {
+    background-color: #ff66002f;
+  }
+  .projectteaminfo{
+    background-color: #EFEFEF;
+border: 1px solid rgba(0, 0, 0, 0.08);
+border-radius: 12px;
+padding: 12px;
+box-shadow: 0 1px 2px rgba(15, 15, 15, 0.04);
+  }
+  
+  .projectteaminfo .team-title {
+    margin: 0 0 12px 0;
+    font-size: 14px;
+  }
+  
+  .members-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .member-item {
+    display: flex;
+    width: 100%;
+    gap: 2px;
+    align-items: center;
+  }
+  
+
+
+  .member-name {
+    flex-grow: 1;
+    font-size: 14px;
+  }
+  
+  .role-badge {
+    padding: 4px 8px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: capitalize;
+  }
+  
+  .role-badge.green {
+    background-color: #b2f2bb;
+    color: #0b8f26;
+  }
+  
+  .role-badge.blue {
+    background-color: #d0ebff;
+    color: #1c7ed6;
+  }
+  
+  .role-badge.pink {
+    background-color: #f3d9fa;
+    color: #ae3ec9;
+  }
+  .role-badge.orange {
+    background-color: #ff66003e;
+    color: #ff6600;
+  }
+  .avatar-wrapper {
+    width: 28px;
+    font-family: "Inria Sans", serif ;
+    height: 28px;
+    margin-right: 10px;
+  }
+  
+  .avatar-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  .avatar-img-highlighted {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-left: -2px;
+    margin-top: -2px;
+    border: 3.5px solid #FFE438; /* highlight first member */
+  }
+  
+  .avatar-initialss {
+    width: 28px;
+    height: 28px;
+    background-color: #bbb;
+    color: black;
+    font-family: "Inria Sans", serif ;
+    font-size: 14px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #ffffff; 
+
+  }
+  
+  .avatar-highlighted {
+    margin-left: -2px;
+    margin-top: -2px;
+    border: 3.5px solid #FFE438; /* highlight first member */
+  }
+  .projectteaminfo .prjtitle{
+    font-size: 16px;
+    font-weight: bold;
+    margin-left: 1rem;
+    margin-top: 0;
+    margin-bottom: 5px;
+  }
+  

@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+.logo{
+    display: flex;
+    align-items: center;
+    width: 280px;
+}
+.logo img {
+    height: 100px;
+    width: 100px;
+
+}
+.logo span{
+     position: absolute;
+     font-family:"Inria Sans", serif ;
+     padding-bottom: 10px;
+     transform: translateX(82px);
+}
+.logo .dark{
+    color: #112B3C;
+    font-size: 38px;
+
+}
+.logo .light{
+    color: #EFEFEF;
+    font-size: 32px;
+    
+}
+.cercle{
+    background-color: #FF6600;
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    transform: translateX(132px);
+
+}
+.cerclelight{
+    background-color: #FF6600;
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    transform: translateX(112px);
+}
+@media (max-width:480px){
+    .logo{
+        width: 220px;
+    }
+    .logo img {
+        height: 70px;
+        width: 70px;
+    
+    }
+    .logo span{
+    
+         font-size: 28px;
+         padding-bottom: 9px;
+         transform: translateX(55px);
+    }
+    .cercle{
+        height: 6px;
+        width: 6px;
+        border-radius: 50%;
+        transform: translateX(98px);
+    
+    }
+}

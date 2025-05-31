@@ -1,0 +1,790 @@
+/* TeamCard.css */
+.team-card-wrapper {
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 16px;
+  padding: 12px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.03);
+  /* Default background (for incomplete) */
+  background-color: rgba(255, 102, 0, 0.1); /* Orange */
+}
+
+.team-info-card {
+background-color: #EFEFEF;
+border: 1px solid rgba(0, 0, 0, 0.08);
+border-radius: 12px;
+padding: 12px;
+box-shadow: 0 1px 2px rgba(15, 15, 15, 0.04);
+}
+
+.card-header {
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.card-header h3 {
+margin: 0;
+font-size: 14px;
+font-weight: 600;
+color: #333;
+}
+
+.icon-btn {
+background: none;
+border: none;
+font-size: 14px;
+cursor: pointer;
+opacity: 0.6;
+transition: opacity 0.2s ease;
+}
+
+.icon-btn:hover {
+opacity: 1;
+}
+
+.property-section {
+margin: 12px 0;
+}
+
+.property-label {
+font-size: 13px;
+font-weight: 500;
+color: #6B7280;
+margin-bottom: 6px;
+}
+
+/* Status (rounded) and Skills (rectangular) */
+.status-option {
+display: inline-block;
+padding: 4px 12px;
+border-radius: 12px;
+font-size: 13px;
+cursor: pointer;
+}
+
+.skill-option {
+display: inline-flex;
+align-items: center;
+padding: 4px 8px 4px 12px;
+border-radius: 4px;
+font-size: 13px;
+margin-right: 6px;
+margin-bottom: 6px;
+cursor: pointer;
+}
+
+.remove-skill {
+margin-left: 6px;
+padding: 0 4px;
+font-size: 14px;
+opacity: 0.7;
+transition: opacity 0.2s;
+}
+
+.remove-skill:hover {
+opacity: 1;
+}
+
+.selected-skills {
+display: block; 
+flex-wrap: wrap;
+gap: 6px;
+
+}
+
+.placeholder, .no-skills {
+color: #9ca3af;
+font-size: 13px;
+}
+
+/* Dropdown Styles */
+.dropdown-container {
+position: relative;
+}
+
+.dropdown-menu {
+position: absolute;
+top: 100%;
+left: 0;
+background: white;
+border: 1px solid #e5e7eb;
+border-radius: 6px;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+z-index: 10;
+min-width: 150px;
+max-height: 300px;
+overflow-y: auto;
+margin-top: 4px;
+}
+
+.skills-dropdown {
+min-width: 200px;
+}
+
+.dropdown-item {
+padding: 8px 12px;
+transition: background-color 0.2s;
+cursor: pointer;
+}
+
+.dropdown-item:hover {
+background-color: #f3f4f6;
+}
+
+.dropdown-item.selected {
+background-color: #f3f4f6;
+font-weight: 500;
+}
+
+/* Skill Search */
+.skill-search {
+display: flex;
+padding: 8px;
+border-bottom: 1px solid #e5e7eb;
+}
+
+.skill-search input {
+flex: 1;
+padding: 6px;
+border: 1px solid #e5e7eb;
+border-radius: 4px;
+outline: none;
+}
+
+.skill-search button {
+margin-left: 4px;
+padding: 0 8px;
+background: #f3f4f6;
+border: none;
+border-radius: 4px;
+cursor: pointer;
+}
+
+.skills-list {
+max-height: 200px;
+overflow-y: auto;
+}
+
+/* Team Members */
+.team-avatars {
+display: flex;
+align-items: center;
+margin-top: 6px;
+}
+
+.avatar-link {
+display: block;
+margin-left: -8px;
+position: relative;
+transition: transform 0.2s ease, margin 0.2s ease;
+}
+
+.avatar-link:first-child {
+margin-left: 0;
+}
+
+.avatar-link:hover {
+transform: scale(1.1);
+margin-left: 4px;
+margin-right: 4px;
+z-index: 1;
+}
+
+.avatar {
+width: 32px;
+height: 32px;
+border-radius: 50%;
+overflow: hidden;
+border: 2px solid white;
+box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+display: block;
+}
+
+.avatar img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+
+.avatar-gold {
+border-color: gold;
+}
+
+/* Join Button */
+.Join-new-team {
+margin-top: 12px;
+background-color: transparent;
+border: 1px solid rgba(0, 0, 0, 0.08);
+border-radius: 12px;
+padding: 12px 16px;
+text-align: left;
+width: 100%;
+box-sizing: border-box;
+}
+
+.Join-new-btn {
+all: unset;
+color: #ff6600;
+font-size: 16px;
+font-weight: 500;
+cursor: pointer;
+display: flex;
+align-items: center;
+gap: 6px;
+}
+
+.plus-icon {
+font-size: 18px;
+}
+/* Add this to your TeamCard.css */
+.card-actions {
+display: flex;
+gap: 4px;
+align-items: center;
+}
+
+.icon-btn {
+width: 24px;
+height: 24px;
+display: flex;
+align-items: center;
+justify-content: center;
+border-radius: 4px;
+color: #37352f;
+opacity: 0.6;
+transition: background-color 100ms ease-out, opacity 100ms ease-out;
+}
+
+.icon-btn:hover {
+background-color: rgba(55, 53, 47, 0.08);
+opacity: 1;
+}
+
+.icon-btn:active {
+background-color: rgba(55, 53, 47, 0.16);
+}
+
+/* More specific styles for the edit and dots buttons */
+/* Replace the existing .edit-btn::before styles with this: */
+.editer-btn {
+  position: relative;
+  width: 24px;
+  height: 24px;
+}
+
+.editer-btn::before {
+  content: "";
+  position: absolute;
+  width: 19px;
+  height: 19px; /* Adjusted to maintain aspect ratio */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url('data:image/svg+xml;charset=UTF-8,<svg width="19" height="23" viewBox="0 0 19 23" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M11.6874 1.49039C12.4512 0.741953 13.4794 0.325171 14.5487 0.330619C15.618 0.336068 16.6419 0.763307 17.3979 1.51949C18.154 2.27566 18.581 3.29967 18.5863 4.36896C18.5915 5.43824 18.1746 6.4664 17.426 7.22997L9.51557 15.1404C9.06974 15.5862 8.79682 15.8591 8.49474 16.0956C8.137 16.3743 7.75 16.6132 7.34057 16.8081C6.99266 16.9737 6.62703 17.0956 6.02912 17.2946L3.24578 18.2227L2.57703 18.4456C2.28365 18.5436 1.96876 18.5579 1.66769 18.487C1.36662 18.416 1.09128 18.2625 0.872555 18.0438C0.653832 17.8251 0.500379 17.5498 0.429412 17.2487C0.358445 16.9476 0.37277 16.6327 0.470781 16.3393L1.62182 12.8873C1.82078 12.2893 1.94266 11.9237 2.10828 11.5758C2.3036 11.1667 2.54286 10.78 2.82182 10.4227C3.05828 10.1196 3.33016 9.84664 3.77599 9.40184L11.6874 1.49039ZM3.20828 16.5883L2.32912 15.7071L3.08745 13.431C3.30828 12.7685 3.39995 12.4987 3.5187 12.2487C3.66592 11.9411 3.84405 11.6529 4.05307 11.3841C4.22391 11.1654 4.42391 10.9633 4.91766 10.4685L11.0541 4.3331C11.373 5.1297 11.8511 5.85281 12.4593 6.4581C13.0647 7.0659 13.7878 7.54372 14.5843 7.86226L8.44787 13.9977C7.95307 14.4925 7.75203 14.6925 7.53328 14.8623C7.26384 15.072 6.97564 15.2505 6.6687 15.3977C6.4187 15.5164 6.14787 15.6081 5.48537 15.8289L3.20828 16.5883ZM15.8291 6.61643C15.6686 6.58102 15.5104 6.53615 15.3552 6.48205C14.6796 6.24727 14.0668 5.86103 13.5635 5.35289C13.0565 4.8487 12.6704 4.23612 12.4343 3.56122C12.3799 3.40604 12.3347 3.24778 12.2989 3.08726L12.7916 2.59559C13.2622 2.1402 13.8929 1.888 14.5477 1.89337C15.2025 1.89874 15.829 2.16125 16.2921 2.6243C16.7551 3.08735 17.0176 3.71383 17.023 4.36865C17.0284 5.02348 16.7762 5.65418 16.3208 6.12476L15.8291 6.61643ZM0.385365 21.9164C0.385365 21.7092 0.467675 21.5105 0.614187 21.364C0.7607 21.2175 0.959414 21.1352 1.16661 21.1352H17.8333V22.6977H1.16661C0.959414 22.6977 0.7607 22.6154 0.614187 22.4689C0.467675 22.3223 0.385365 22.1236 0.385365 21.9164Z" fill="%23999999"/></svg>');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.dots-btn::before {
+content: "⋯";
+font-size: 18px;
+line-height: 0;
+}
+.team-info-card:hover,
+.Join-new-team:hover {
+background-color: rgba(255, 102, 0, 0.1); /* orange */
+border-color: rgba(255, 102, 0, 0.2);
+}
+
+/* Complete status hover */
+.team-card-wrapper.complete .team-info-card:hover,
+.team-card-wrapper.complete .Join-new-team:hover {
+background-color: rgba(46, 204, 113, 0.1); /* green */
+border-color: rgba(46, 204, 113, 0.2);
+}
+/* Add this to your TeamCard.css */
+.card-header {
+  position: relative; /* Add this to position the buttons correctly */
+}
+
+.card-actions {
+  display: none; /* Hide by default */
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: white;
+  padding: 2px;
+  border-radius: 4px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.team-info-card:hover .card-actions {
+  display: flex; /* Show on hover */
+}
+/* Add these styles to your existing Teams.css */
+.teams-grid {
+  display: grid;
+  margin-bottom: 30px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  width: 100%;
+}
+
+/* Optional: Responsive adjustments */
+@media (max-width: 768px) {
+  .teams-grid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .teams-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.team-card-wrapper.complete {
+  background-color: rgba(46, 204, 113, 0.1); /* Green */
+}
+/* Member badge styles */
+.current-user .avatar {
+  position: relative;
+  background-color: #f3f4f6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-badge {
+  font-size: 10px;
+  font-weight: bold;
+  color: #4b5563;
+}
+
+/* Member message styles */
+.member-message {
+  padding: 12px;
+  text-align: center;
+  background-color: #f3f4f6;
+  border-radius: 8px;
+  margin-top: 12px;
+  font-size: 14px;
+  color: #4b5563;
+}
+/* Add to your existing Teams.css */
+
+/* Compact card styles */
+.team-card-wrapper.compact {
+  padding-bottom: 12px;
+}
+
+.team-card-wrapper.compact .team-info-card {
+  margin-bottom: 0;
+  padding-bottom: 8px;
+}
+
+.team-card-wrapper.compact .property-section {
+  margin: 8px 0;
+}
+
+/* Member message styling */
+.member-message {
+  padding: 8px 12px;
+  margin: 8px 12px 0;
+  text-align: center;
+  background-color: #f8f9fa;
+  border-radius: 6px;
+  font-size: 13px;
+  color: #6c757d;
+  border: 1px solid #e9ecef;
+}
+
+/* Adjust avatar size in compact mode */
+.team-card-wrapper.compact .team-avatars .avatar {
+  width: 28px;
+  height: 28px;
+}
+
+/* Smaller status/skills in compact mode */
+.team-card-wrapper.compact .status-option,
+.team-card-wrapper.compact .skill-option {
+  font-size: 12px;
+  padding: 3px 8px;
+}
+
+/* Smaller property labels */
+.team-card-wrapper.compact .property-label {
+  font-size: 12px;
+  margin-bottom: 4px;
+}
+
+
+/* Main card wrapper adjustments */
+.team-card-wrapper {
+  position: relative;
+  border-radius: 16px;
+  overflow: visible; /* Ensures no overflow from compact changes */
+}
+
+/* Compact version for leaders/members */
+.team-info-card.compact {
+  padding-bottom: 0; /* Remove bottom padding */
+  margin-bottom: 0;  /* Remove bottom margin */
+}
+
+/* Join button container - only appears for students */
+.Join-new-team {
+  margin-top: auto; /* Pushes to bottom for student cards */
+}
+
+/* Member message styling - appears inside card for members */
+.member-message {
+  padding: 8px;
+  margin: 8px 12px;
+  background: rgba(0,0,0,0.03);
+  border-radius: 6px;
+  font-size: 13px;
+  text-align: center;
+  color: #666;
+}
+
+/* Adjust content spacing in compact mode */
+.team-info-card.compact .property-section:last-child {
+  margin-bottom: 8px; /* Reduced bottom margin */
+}
+
+/* Smaller avatars in compact mode */
+.team-info-card.compact .team-avatars .avatar {
+  width: 28px;
+  height: 28px;
+  border-width: 1px;
+}
+
+/* Avatar styles */
+.avatar {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: white;
+}
+
+.avatar-gold {
+  border-color: gold;
+  box-shadow: 0 0 0 2px gold;
+}
+
+.avatar-initials {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+}
+
+.leader-star {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background: gold;
+  color: #000;
+  border-radius: 50%;
+  width: 14px;
+  height: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 8px;
+  border: 1px solid white;
+}
+
+/* Current user styles */
+.current-user .avatar {
+  border-color: #ff6600;
+}
+
+.user-me {
+  font-size: 10px;
+  background-color: #ff6600 !important;
+}
+
+/* Avatar hover effects */
+.avatar-link:hover .avatar {
+  transform: scale(1.1);
+}
+
+.avatar-link.leader:hover .avatar-gold {
+  box-shadow: 0 0 0 3px gold;
+}
+
+/* Team leader crown */
+.leader-crown {
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: gold;
+  font-size: 12px;
+  text-shadow: 0 1px 1px rgba(0,0,0,0.3);
+}
+/* Avatar styles */
+.avatar {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatar-gold {
+  border-color: gold;
+  box-shadow: 0 0 0 2px gold;
+}
+
+.leader-star {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background: gold;
+  color: #000;
+  border-radius: 50%;
+  width: 14px;
+  height: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 8px;
+  border: 1px solid white;
+}
+
+.current-user .avatar {
+  border-color: #ff6600;
+}
+
+.user-badge {
+  position: absolute;
+  bottom: -5px;
+  right: -5px;
+  background: #ff6600;
+  color: white;
+  border-radius: 4px;
+  padding: 2px 4px;
+  font-size: 10px;
+  line-height: 1;
+}
+.avatar-gold {
+  border: 3px solid gold;
+  background-color: gold;
+}
+
+.leader-star {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  font-size: 12px;
+  color: gold;
+}
+/* Three dots loading animation */
+.three-dots {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  height: 100%;
+}
+
+.dot {
+  font-size: 24px;
+  line-height: 1;
+  animation: bounce 1.4s infinite ease-in-out both;
+}
+
+.dot:nth-child(1) {
+  animation-delay: -0.32s;
+}
+
+.dot:nth-child(2) {
+  animation-delay: -0.16s;
+}
+
+.dot:nth-child(3) {
+  animation-delay: 0s;
+}
+
+@keyframes bounce {
+  0%, 80%, 100% { 
+    transform: translateY(0);
+    opacity: 0.5;
+  }
+  40% {
+    transform: translateY(-5px);
+    opacity: 1;
+  }
+}
+
+.Join-new-btn.joining {
+  min-width: 120px; /* Keep consistent width when loading */
+}
+
+
+
+.no-teams-content {
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ }
+/* Success Notification */
+.success-notification {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #f6ffed;
+  border: 1px solid #008000;
+  border-radius: 4px;
+  padding: 8px 15px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  z-index: 1000;
+  animation: slideDown 0.3s ease-out, fadeOut 0.5s ease 2.5s forwards;
+}
+
+.notification-content {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.checkmark {
+  width: 18px;
+  height: 18px;
+}
+
+.checkmark-circle {
+  stroke: #008000;
+  stroke-width: 2;
+}
+
+.checkmark-check {
+  stroke: #008000;
+  stroke-width: 2;
+  stroke-linecap: round;
+}
+
+@keyframes slideDown {
+  from {
+    top: -50px;
+    opacity: 0;
+  }
+  to {
+    top: 20px;
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+.profile-popup-overlay {
+  position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+  background: rgba(0,0,0,0.18); display: flex; align-items: center; justify-content: center; z-index: 1000;
+}
+.profile-popup-mini {
+  width: 550px !important;
+  min-width: 0 !important;
+  height: auto !important;
+  border-radius: 18px !important;
+  padding-bottom: 10px;
+  position: relative;
+  background-color: #EFEFEF;
+}
+.profile-banner.mini {
+  height: 100px !important;
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
+}
+.profile-photo.mini {
+  width: 70px !important;
+  height: 70px !important;
+  margin-top: -35px !important;
+  margin-left: 20px !important;
+  border-width: 4px !important;
+}
+.profile-section.mini {
+  padding: 0 1rem !important;
+  flex-wrap: wrap;
+}
+.profile-left.mini {
+  font-size: 0.9rem;
+}
+.profile-name.mini {
+  font-size: 1.1rem !important;
+  margin-left: 0.5vw !important;
+}
+.profile-status.mini,
+.profile-feild.mini {
+  font-size: 0.85rem !important;
+  margin-left: 0.5vw !important;
+}
+.skills-label.mini {
+  font-size: 0.95rem !important;
+  margin: 10px 0 8px 0.5vw !important;
+}
+.skills-list.mini {
+  gap: 0.3rem !important;
+  margin-left: 0.5vw !important;
+}
+.skill-badge.mini, .no-skill-badge.mini {
+  font-size: 0.7rem !important;
+  padding: 3px 7px !important;
+  border-radius: 6px !important;
+}
+.profile-right.mini {
+  gap: 0.5rem !important;
+}
+.current-role.mini p, .current-role.mini span {
+  font-size: 0.9rem !important;
+}
+.info-cards.mini {
+  margin-top: 1.2rem !important;
+  gap: 1rem !important;
+  padding: 0 1.2rem !important;
+}
+.info-card.mini {
+  padding: 0.5rem !important;
+  min-width: 0 !important;
+  border-radius: 10px !important;
+}
+.card-title.mini {
+  font-size: 0.9rem !important;
+}
+.close-popup.mini {
+  position: absolute; top: 10px; right: 18px; background: none; border: none; font-size: 20px; cursor: pointer; color: #205375; z-index: 2;
+}

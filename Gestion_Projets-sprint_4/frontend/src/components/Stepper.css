@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:wght@400;700&display=swap');
+
+.stepper {
+  display: flex;
+  align-items: center;
+  font-family: 'Inria Sans', sans-serif;
+  gap: 20px;
+  overflow-x: auto;
+  padding: 20px 0;
+}
+
+.step {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.step-number {
+  background-color: transparent; /* No background for default */
+  color: #ccc;
+  border: 2px solid #ccc; /* Default grey border */
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.step.active .step-number {
+  border: 3px solid #f97316; /* Bold orange border for active step */
+  color: #f97316;
+}
+
+.step.completed .step-number {
+  background-color: white;
+  color: #2eb872; /* Green checkmark */
+  border: 2px solid #2eb872;
+  position: relative;
+}
+
+.step.completed .step-number::before {
+  content: '✔'; 
+  font-weight: bold;
+  color: #2eb872;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.step-info {
+  margin-left: 10px;
+}
+
+.step-title {
+  font-size: 14px;
+  font-weight: bold;
+  color: #112B3C;
+}
+
+.step-description {
+  font-size: 12px;
+  color: #777;
+}
+
+.step-line {
+  height: 2px;
+  width: 40px;
+  background: linear-gradient(
+    to right,
+    #2eb872 50%,  /* Completed half */
+    #ccc 50%        /* Remaining half */
+  );
+  margin-left: 20px;
+}

@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+.Submission-enseignant {
+  display: flex;
+  min-height: 100vh;
+  font-family: 'Inria Sans', sans-serif;
+  background-color: #f3f4f6;
+}
+
+.main-content {
+  flex-grow: 1;
+  padding: 2rem;
+  background-color: #112b3c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-section {
+  background-color: #EFEFEF;
+  height: 93vh;
+  padding: 2vh 2vw;
+  width: 93%;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  -ms-overflow-style: none;
+}
+
+.form-section::-webkit-scrollbar {
+  display: none;
+}
+
+.form-section h1 {
+  color: #112b3c;
+  font-size: 32px;
+  font-family: 'Inria Sans', serif;
+  margin-bottom: 1rem;
+}
+
+.form-section p {
+  color: #112b3c;
+  font-size: 16px;
+  margin-bottom: 2rem;
+}
+
+.form-section label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #112b3c;
+  font-size: 16px;
+}
+
+.form-section input,
+.form-section select {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.form-section input[type="file"] {
+  padding: 0.25rem;
+}
+
+.form-section table {
+  width: 100%;
+  margin-bottom: 1rem;
+  border-collapse: collapse;
+}
+
+.form-section table td {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+}
+
+.form-section table td:first-child {
+  width: 30%;
+  background-color: #f9f9f9;
+}

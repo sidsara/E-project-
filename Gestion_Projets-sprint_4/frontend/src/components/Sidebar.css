@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+.sidebar{
+    background-color: #112B3C;
+    width: 16vw;
+    height: 100vh;
+    position: fixed;
+}
+.center{
+    background-color: #112B3C;
+    height: 58vh;
+    width: 100%;
+}
+.sidebarlistup{
+    background-color: #112B3C;
+    width: 100%;
+    padding: 0px;
+    color: #EFEFEF;
+    font-family:"Inria Sans", serif ;
+    font-size: 24px;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    list-style: none;
+}
+.sidebarlistup a{
+    text-decoration: none;
+    padding: 8px;
+    padding-left:20px;
+    margin-left: 1vw;
+    background-color: #112B3C;
+    color: #EFEFEF;
+    transition: 0.3s ease;
+    border: 2px solid #112B3C;
+
+}
+
+.sidebarlistup a:hover{
+    background-color: #516776;
+    border-radius: 8px;
+
+}
+
+
+.sidebarlistup li{
+    display: flex;
+    align-items: center;   
+    cursor: pointer;
+
+}
+
+
+
+.sidebarlistup li svg{
+    width: 30px;
+    padding: 8px;
+}
+.linediv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+}

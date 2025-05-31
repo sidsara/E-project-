@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+.acclistheadercontainer{
+    width: 100%;
+    height: 4vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+    margin-top: 10px;
+}
+.acclistheadercontainer ul{
+    list-style: none;
+    font-family:"Inria Sans", serif;
+    color: #999999;
+    width: 90%;
+    height: 4vh;
+    display: flex;
+    align-items: center;
+}
+.acclistheadercontainer .info{
+   width: 20%;
+}

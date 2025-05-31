@@ -1,0 +1,80 @@
+.teacherlistcontainer {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Inria Sans", serif;
+}
+
+.teacherlistcontainer .teacher {
+    width: 90%;
+    height: 8vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+}
+
+.teacherlistcontainer .teacher .profile {
+    display: flex;
+    align-items: center;
+}
+
+.teacherlistcontainer .teacher .profile img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.teacherlistcontainer .teacher .profile .info {
+    display: flex;
+    flex-direction: column;
+}
+
+.teacherlistcontainer .teacher .profile .info span {
+    font-size: 18px;
+    color: #112b3c;
+    font-weight: bold;
+}
+
+.teacherlistcontainer .teacher .profile .info p {
+    font-size: 16px;
+    color: #999;
+    margin: 0;
+}
+
+.teacherlistcontainer .teacher .status {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    color: #225375;
+}
+
+.teacherlistcontainer .teacher .status.active {
+    color: #ff6000;
+}
+
+.teacherlistcontainer .teacher .actions {
+    display: flex;
+    gap: 10px;
+}
+
+.teacherlistcontainer .teacher .actions button {
+    border: 1px solid #ff6000;
+    background-color: transparent;
+    color: #ff6000;
+    border-radius: 50px;
+    padding: 5px 15px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.teacherlistcontainer .teacher .actions button:hover {
+    background-color: #ff6000;
+    color: #fff;
+}

@@ -1,0 +1,63 @@
+.document-card{
+    background-color: #E7E8EB;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    height: 50px;
+    border: rgb(0,0, 0,0.06) solid 1px;
+    border-radius: 10px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.03);
+    padding: 0.5rem 1.5rem 1rem 1.5rem;
+    margin: 6px 0;
+}
+.document-card:hover{
+    background-color:rgba(32, 83, 117, 0.1);
+    transition: 0.3s;
+}
+.document-card .document-content{
+    display: flex;
+    height: 70%;
+    flex-direction: column;
+    gap: 0px;
+}
+.document-card .document-content span{
+    font-size: 16px;
+    font-weight: bold;
+    color: #ff6000;
+    font-family: "Inria Sans", serif;
+}
+.document-card .document-content p{
+    font-size: 16px;
+    color: #225375;
+    font-family: "Inria Sans", serif;
+    margin: 0;
+    padding: 0;
+}
+.document-status{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 20%;
+}
+.status-dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: #E7E8EB;
+    border: 1px solid #E7E8EB;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    z-index: 10;
+    border-radius: 5px;
+}
+
+.status-dropdown div {
+    padding: 0.3rem 0.5rem;
+    cursor: pointer;
+}
+
+.status-dropdown div:hover {
+    background-color:rgba(32, 83, 117, 0.1);
+    transition: 0.3s;
+}

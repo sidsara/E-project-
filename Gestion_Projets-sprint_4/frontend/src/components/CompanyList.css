@@ -1,0 +1,103 @@
+.companylistcontainer {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Changed from center to flex-start */
+    font-family: "Inria Sans", serif;
+}
+
+.companylistcontainer .company {
+    width: 100%; /* Changed from 90% to 100% */
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+}
+
+.companylistcontainer .company .profile {
+    display: flex;
+    align-items: center;
+    width: 40%; /* Fixed width for profile section */
+    min-width: 300px; /* Minimum width to prevent squeezing */
+}
+
+.companylistcontainer .company .profile img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px; /* Increased margin for better spacing */
+    flex-shrink: 0; /* Prevent image from shrinking */
+}
+
+.companylistcontainer .company .profile .info {
+    display: flex;
+    flex-direction: column;
+    width: 100%; /* Take full available width */
+}
+
+.companylistcontainer .company .profile .info span {
+    font-size: 18px;
+    color: #112b3c;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.companylistcontainer .company .profile .info p {
+    font-size: 16px;
+    color: #999;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Alternative method if you want perfect alignment */
+/*
+.companylistcontainer .company .profile .info p {
+    margin-left: 65px;  Width of image + margin 
+    text-indent: -65px;  Pulls text back to align with name 
+    padding-left: 10px;  Small gap after the colon 
+}
+*/
+
+.companylistcontainer .company .status {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    color: #225375;
+    min-width: 120px; /* Prevent status from squeezing */
+}
+
+.companylistcontainer .company .status.active {
+    color: #ff6000;
+}
+
+.companylistcontainer .company .actions {
+    display: flex;
+    gap: 10px;
+    min-width: 180px; /* Prevent buttons from squeezing */
+    justify-content: flex-end;
+}
+
+.companylistcontainer .company .actions button {
+    border: 1px solid #ff6000;
+    background-color: transparent;
+    color: #ff6000;
+    border-radius: 50px;
+    padding: 5px 15px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+    white-space: nowrap; /* Prevent button text from wrapping */
+}
+
+.companylistcontainer .company .actions button:hover {
+    background-color: #ff6000;
+    color: #fff;
+}

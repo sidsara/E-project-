@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/static/css/main.5720ea86.css",
+    "main.js": "/static/js/main.0abdd322.js",
+    "static/media/Home2.png": "/static/media/Home2.dbc87a427861f8195248.png",
+    "static/media/Home4.png": "/static/media/Home4.c2dbb3c654de0ec0ff35.png",
+    "static/media/Home3.png": "/static/media/Home3.cdcfa12ef7a2f3fe7128.png",
+    "static/media/Home1.jpg": "/static/media/Home1.acbac7bc5643d88c9ec2.jpg",
+    "static/media/lightlogo.png": "/static/media/lightlogo.f2d8e014cece0dd95001.png",
+    "static/media/Logo.png": "/static/media/Logo.815ea4a15ad01508d37a.png",
+    "index.html": "/index.html",
+    "main.5720ea86.css.map": "/static/css/main.5720ea86.css.map",
+    "main.0abdd322.js.map": "/static/js/main.0abdd322.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5720ea86.css",
+    "static/js/main.0abdd322.js"
+  ]
+}

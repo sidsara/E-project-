@@ -1,0 +1,300 @@
+@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+.doyouwant {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.16); /* Semi-transparent background */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-family:"Inria Sans", serif ;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.doyouwantwrapper {
+    background: #EFEFEF;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 310px;
+}
+
+.doyouwant p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    columns: #112b3c;
+    color: #112b3c;
+}
+
+.yesno {
+    display: flex;
+    justify-content: space-around;
+}
+
+.yes, .cancel {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.yes {
+    background-color: #ff6000;
+    color: #EFEFEF;
+}
+
+.cancel {
+    background-color: #EFEFEF;
+    color: #ff6000;
+    border: 1px solid #ff6000;
+}
+.filterbox,.add-schedule {
+    background: #EFEFEF;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    width: 310px;
+    display: flex;
+    flex-direction: column;
+}
+.filterbox label,.add-schedule label{
+    color: #225375;
+    margin: 10px 0;
+}
+.filterbox input {
+        width: 85%;
+        height: 40px;
+        line-height: 28px;
+        padding: 0 1rem;
+        padding-left: 1.5rem;
+        border: 2px solid transparent;
+        border-radius: 8px;
+        outline: none;
+        font-family:"Inria Sans", serif ;
+        margin-bottom: 10px;
+        background-color: #E7E8EB;
+        color: #112b3c;
+        transition: .3s ease;
+       }
+       
+       .filterbox input::placeholder {
+        color: #9e9ea7;
+       }
+       
+      .filterbox  input:focus,.filterbox input:hover {
+        outline: none;
+        border-color: rgba(255, 96, 0, 0.4);
+        box-shadow: 0 0 0 4px rgba(255, 96, 0, 0.1);
+       }
+       .filterbox select,.add-schedule select{
+         width: 100%;
+        height: 40px;
+        line-height: 28px;
+        padding: 0 1rem;
+        padding-left: 1.5rem;
+        border: 2px solid transparent;
+        border-radius: 8px;
+        outline: none;
+        font-family:"Inria Sans", serif ;
+        margin-bottom: 10px;
+        background-color: #E7E8EB;
+        color: #112b3c;
+        cursor: pointer;
+        appearance: none;
+        transition: .3s ease;
+       }
+       .filterbox  select:focus,.filterbox select:hover,.add-schedule select:hover ,.add-schedule select:focus{
+        outline: none;
+        border-color: rgba(255, 96, 0, 0.4);
+        box-shadow: 0 0 0 4px rgba(255, 96, 0, 0.1);
+       }
+    .filterbox .yesno,.add-schedule .yesno{
+        margin-top: 10px;
+    }
+    .filterbox textarea{
+        background-color: #E7E8EB;
+    }
+    .file-upload-container {
+        width: 85%;
+        cursor: pointer;
+        height: 40px;
+        line-height: 28px;
+        padding: 0 1rem;
+        padding-left: 1.5rem;
+        border: 2px solid transparent;
+        border-radius: 8px;
+        outline: none;
+        font-family:"Inria Sans", serif ;
+        margin-bottom: 10px;
+        background-color: #E7E8EB;
+        color: #112b3c;
+        transition: .3s ease;
+        display: flex;
+        align-items: center;
+    }
+    
+    .file-upload-container label {
+        flex-grow: 1;
+        cursor: pointer;
+        color: #999;
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+    
+    .file-upload-container input[type="file"] {
+        display: none;
+    }
+    
+    .file-upload-container .icon {
+        font-size: 18px;
+        color: #336699;
+        cursor: pointer;
+    }
+    .loadercontainer{
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .loader {
+        display: inline-block;
+        position: relative;
+        width: 80px;
+        height: 80px;
+      }
+      
+      .loader div {
+        position: absolute;
+        top: 33px;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: #225375;
+        animation-timing-function: cubic-bezier(0, 1, 1, 0);
+      }
+      
+      .loader div:nth-child(1) {
+        left: 8px;
+        animation: flip1 0.6s infinite;
+      }
+      
+      .loader div:nth-child(2) {
+        left: 8px;
+        animation: flip2 0.6s infinite;
+      }
+      
+      .loader div:nth-child(3) {
+        left: 32px;
+        animation: flip2 0.6s infinite;
+      }
+      
+      .loader div:nth-child(4) {
+        left: 56px;
+        animation: flip3 0.6s infinite;
+      }
+      
+      @keyframes flip1 {
+        0% {
+          transform: scale(0);
+        }
+      
+        100% {
+          transform: scale(1);
+        }
+      }
+      
+      @keyframes flip3 {
+        0% {
+          transform: scale(1);
+        }
+      
+        100% {
+          transform: scale(0);
+        }
+      }
+      
+      @keyframes flip2 {
+        0% {
+          transform: translate(0, 0);
+        }
+      
+        100% {
+          transform: translate(24px, 0);
+        }
+      }
+.space{
+    width: 100%;
+    height: 2vh;
+}
+.no-results{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 65vh;/* Ensure enough space */
+    width: 100%;
+    flex-direction: column;
+}
+.no-results svg{
+    margin-bottom: 20px;
+
+}
+.no-results h1{
+    color: #ff6000;
+    font-family:"Inria Sans", serif ;
+}
+
+/* Ensure the header is sticky and only the projects list is scrollable */
+.admincontainer {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Full viewport height */
+}
+
+.adminwrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    
+    overflow: hidden; /* Prevent scrolling of the entire page */
+}
+
+.allcontains {
+    display: flex;
+    flex-direction: column;
+    flex: 1; 
+    overflow-y: auto;
+   scrollbar-width: none; /* Prevent scrolling of the entire container */
+}
+
+.projects-list {
+    flex: 1;
+    overflow-y: auto;
+    scrollbar-width: none; /* Make only the list scrollable */
+    padding: 10px 0; /* Add vertical padding only */
+    border-bottom: 1px solid #ddd; /* Subtle bottom border for separation */
+    background-color: transparent; /* Transparent background for a clean look */
+}
+
+.header-container {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #fff; /* Match the background color of the header */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for better visibility */
+}
+.adminpload{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 10vh;
+}

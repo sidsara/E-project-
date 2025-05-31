@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+
+.admincontainer{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+}
+.adminwrapper{
+    background-color: #112b3c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 84vw;
+    right: 0;
+    position: fixed;
+}
+.adminwrapper .adwrapper{
+    background-color: #EFEFEF;
+    height: 93vh;
+    padding: 2vh 2vw 0 2vw ;
+    width: 93%;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    scrollbar-color: #112b3c #ddd; /* Thumb color, Track color */
+    scrollbar-width: 1px;
+  /* Enable scrolling when content overflows */
+  overflow-y: auto;
+  scrollbar-width: none; /* For Firefox */
+  -ms-overflow-style: none; /* Hide scrollbar for IE/Edge */
+}
+.adminwrapper .adwrapper .allcontains{
+    min-height: 93vh;
+}
+
+.adminwrapper .adwrapper::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for Chrome/Safari */
+}
+/* Scrollbar Styling for Webkit Browsers (Chrome, Safari) */
+.adminwrapper .adwrapper::-webkit-scrollbar {
+    width: 6px; /* Thin scrollbar */
+}
+
+/* Scrollbar Track */
+.adminwrapper .adwrapper::-webkit-scrollbar-track {
+    background: #ddd; /* Light grey background */
+    border-radius: 10px;
+}
+
+/* Scrollbar Thumb (the draggable part) */
+.adminwrapper .adwrapper::-webkit-scrollbar-thumb {
+    background: #112b3c; /* Dark blue thumb */
+    border-radius: 10px;
+}
+
+/* Scrollbar Thumb on Hover */
+.adminwrapper .adwrapper::-webkit-scrollbar-thumb:hover {
+    background: #0d1e2a; /* Darker blue for hover effect */
+}
+.adminwrapper .adwrapper .pagename{
+    color: #112b3c;
+    font-size: 32px;
+    font-family:"Inria Sans", serif ;
+
+}

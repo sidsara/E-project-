@@ -1,0 +1,62 @@
+.fail-msg {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff2f0;
+    border: 1px solid #f44336;
+    border-radius: 4px;
+    padding: 8px 15px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    z-index: 1000;
+    animation: slideDown 0.3s ease-out, fadeOut 0.5s ease 2.5s forwards;
+  }
+  
+  .fail-msg-content {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .fail-msg-icon {
+    width: 18px;
+    height: 18px;
+  }
+  
+  .fail-msg-circle {
+    fill: none;
+    stroke: #f44336;
+    stroke-width: 2;
+  }
+  
+  .fail-msg-x {
+    fill: none;
+    stroke: #f44336;
+    stroke-width: 2;
+    stroke-linecap: round;
+  }
+  
+  /* Reuse the same animations from SuccMsg */
+  @keyframes slideDown {
+    from {
+      top: -50px;
+      opacity: 0;
+    }
+    to {
+      top: 20px;
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeOut {
+    from {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+    to {
+      opacity: 0;
+      transform: translateX(-50%) translateY(-10px);
+    }
+  }

@@ -1,0 +1,261 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Etudiant {
+  id                  Int              @id @default(autoincrement())
+  nom                 String
+  prenom              String
+  email               String           @unique
+  password            String
+  equipeId            Int?
+  equipe              Equipe?          @relation(fields: [equipeId], references: [id], onDelete: SetNull)
+  chefEquipe          Boolean          @default(false)
+  niveau              String
+  specialite          String?
+  sentInvitations     Invitation[]     @relation("SentInvitations")
+  receivedInvitations Invitation[]     @relation("ReceivedInvitations")
+  skills              String[]         @default([])
+  profileImageUrl     String?
+  notesSoutenances    NoteSoutenance[]
+}
+
+enum InvitationStatus {
+  PENDING
+  ACCEPTED
+  REJECTED
+}
+
+enum EquipeStatus {
+  INCOMPLET
+  COMPLET
+}
+
+model Invitation {
+  id         Int              @id @default(autoincrement())
+  senderId   Int
+  receiverId Int
+  equipeId   Int
+  status     InvitationStatus @default(PENDING)
+  createdAt  DateTime         @default(now())
+
+  sender   Etudiant @relation("SentInvitations", fields: [senderId], references: [id])
+  receiver Etudiant @relation("ReceivedInvitations", fields: [receiverId], references: [id])
+  equipe   Equipe   @relation("EquipeInvitations", fields: [equipeId], references: [id], onDelete: Cascade)
+}
+
+model Equipe {
+  id             Int            @id @default(autoincrement())
+  niveau         String
+  specialite     String?
+  etudiants      Etudiant[]
+  skillsRequired String[]       @default([])
+  status         EquipeStatus   @default(INCOMPLET)
+  invitations    Invitation[]   @relation("EquipeInvitations")
+  minMembers     Int            @default(2)
+  maxMembers     Int            @default(6)
+  projet         Projet?
+  demandesSujet  DemandeSujet[] @relation("EquipeDemandes")
+  soutenance     Soutenance?
+}
+
+model Enseignant {
+  id                 Int                @id @default(autoincrement())
+  nom                String
+  prenom             String
+  email              String             @unique
+  password           String
+  sujets             Sujet[]
+  projets            Projet[]
+  equipeEncadrants   equipeEncadrants[]
+  participationsJury MembreJury[]
+  notesSoutenances   NoteSoutenance[]
+}
+
+model equipeEncadrants {
+  id          Int          @id @default(autoincrement())
+  Enseignants Enseignant[]
+  Sujet       Sujet[]
+}
+
+model Sujet {
+  id               Int               @id @default(autoincrement())
+  titre            String
+  description      String
+  encadrants       Int?
+  equipeEncadrants equipeEncadrants? @relation(fields: [encadrants], references: [id])
+  enseignantId     Int?
+  Enseignant       Enseignant?       @relation(fields: [enseignantId], references: [id])
+  entrepriseId     Int?
+  Entreprise       Entreprise?       @relation(fields: [entrepriseId], references: [id])
+  niveau           Int
+  specialite       String?
+  dateDepot        DateTime          @default(now())
+  document         String? // Nouveau champ pour stocker le document
+  Projet           Projet[]
+  status           String            @default("pending")
+
+  demandesSujet DemandeSujet[] @relation("SujetDemandes")
+}
+
+model Projet {
+  id          Int        @id @default(autoincrement())
+  equipeId    Int        @unique
+  Equipe      Equipe     @relation(fields: [equipeId], references: [id], onDelete: Cascade)
+  sujetId     Int
+  Sujet       Sujet      @relation(fields: [sujetId], references: [id], onDelete: Cascade)
+  encadrantId Int
+  Encadrant   Enseignant @relation(fields: [encadrantId], references: [id])
+
+  dateDebut  DateTime
+  dateFin    DateTime
+  livrables  Livrable[]
+  rendezVous RendezVous[]
+  remarques  Remarque[]
+  tasks      Task[]
+}
+
+model Soutenance {
+  id               Int              @id @default(autoincrement())
+  equipeId         Int              @unique
+  equipe           Equipe           @relation(fields: [equipeId], references: [id], onDelete: Cascade)
+  date             DateTime
+  heure            String
+  salle            String
+  membresJury      MembreJury[]
+  notesSoutenances NoteSoutenance[]
+  pv               PvDeliberation?
+}
+
+model PvDeliberation {
+  id             Int        @id @default(autoincrement())
+  soutenanceId   Int        @unique
+  soutenance     Soutenance @relation(fields: [soutenanceId], references: [id])
+  notes          Json // Store detailed notes
+  commentaires   String?    @db.Text
+  decision       String // ADMIS, AJOURNE, etc.
+  dateGeneration DateTime   @default(now())
+  pdfUrl         String? // Store the path to the generated PDF
+}
+
+model MembreJury {
+  id           Int        @id @default(autoincrement())
+  soutenanceId Int
+  enseignantId Int
+  estPresident Boolean    @default(false)
+  // true = président, false = membre normal
+  soutenance   Soutenance @relation(fields: [soutenanceId], references: [id], onDelete: Cascade)
+  enseignant   Enseignant @relation(fields: [enseignantId], references: [id], onDelete: Cascade)
+
+  @@unique([soutenanceId, enseignantId])
+}
+
+model Admin {
+  id       Int    @id @default(autoincrement())
+  email    String @unique
+  password String
+  nom      String
+  prenom   String
+}
+
+model Entreprise {
+  id       Int     @id @default(autoincrement())
+  nom      String
+  email    String  @unique
+  password String
+  sujets   Sujet[]
+}
+
+enum taskStatus {
+  TODO
+  DONE
+}
+
+enum LivrableStatus {
+  VALIDATED
+  NEEDS_IMPROVEMENT
+  REJECTED
+  PENDING
+}
+
+enum typeRDV {
+  ONLINE
+  ONSITE
+}
+
+enum statusRDV {
+  UPCOMING
+  COMPLETED
+}
+
+model RendezVous {
+  id       Int       @id @default(autoincrement())
+  projetId Int
+  projet   Projet    @relation(fields: [projetId], references: [id], onDelete: Cascade)
+  titre    String
+  date     DateTime
+  heure    String
+  salle    String
+  duration String
+  type     typeRDV   @default(ONSITE)
+  status   statusRDV @default(UPCOMING)
+}
+
+model Task {
+  id          Int        @id @default(autoincrement())
+  projetId    Int
+  projet      Projet     @relation(fields: [projetId], references: [id], onDelete: Cascade)
+  description String
+  deadline    DateTime
+  status      taskStatus @default(TODO)
+}
+
+model Livrable {
+  id        Int            @id @default(autoincrement())
+  projetId  Int
+  projet    Projet         @relation(fields: [projetId], references: [id], onDelete: Cascade)
+  nom       String
+  fichier   String
+  status    LivrableStatus @default(PENDING)
+  dateDepot DateTime       @default(now())
+}
+
+model Remarque {
+  id        Int      @id @default(autoincrement())
+  projetId  Int
+  projet    Projet   @relation(fields: [projetId], references: [id], onDelete: Cascade)
+  contenu   String
+  createdAt DateTime @default(now())
+}
+
+model DemandeSujet {
+  id         Int              @id @default(autoincrement()) // ID unique auto-incrémenté
+  equipeId   Int // ID de l'équipe ayant fait la demande
+  sujetId    Int // ID du sujet concerné par la demande
+  statut     InvitationStatus @default(PENDING) // Statut de la demande, par défaut "PENDING"
+  motifRefus String? // Motif de refus, uniquement en cas de refus
+  createdAt  DateTime         @default(now()) // Date de création de la demande
+
+  // Relations avec les modèles Equipe et Sujet
+  Equipe Equipe @relation("EquipeDemandes", fields: [equipeId], references: [id])
+  Sujet  Sujet  @relation("SujetDemandes", fields: [sujetId], references: [id])
+}
+
+model NoteSoutenance {
+  id              Int        @id @default(autoincrement())
+  etudiantId      Int
+  etudiant        Etudiant   @relation(fields: [etudiantId], references: [id], onDelete: Cascade)
+  soutenanceId    Int
+  soutenance      Soutenance @relation(fields: [soutenanceId], references: [id], onDelete: Cascade)
+  juryPresidentId Int
+  president       Enseignant @relation(fields: [juryPresidentId], references: [id])
+  note            Float
+  createdAt       DateTime   @default(now())
+
+  @@unique([etudiantId, soutenanceId, juryPresidentId], name: "uniqueNote")
+}

@@ -1,0 +1,394 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+.logwrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family:"Inria Sans", serif ;
+}
+.sidelogo{
+    position:absolute;
+}
+.bottomright{
+    position: absolute;
+  transform: translateY(45vh);
+  padding-left: 80vw;
+
+}
+.bottomright a{
+    color: #205375;
+    font-size: 20px;
+}
+.bottomleft{
+    position: absolute;
+  transform: translateY(45vh);
+  padding-right: 80vw;
+
+}
+.bottomleft span{
+    color: #205375;
+    font-size: 20px;
+}
+.bottomleft i{
+    color: #205375;
+    font-size: 24px;
+    transform: translateY(2px);
+    
+}
+.loginwrapper{
+ background-color: #D9D9D933;
+ height: 80vh;
+ width: 40vw;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ border-radius:32px;
+ border: 1px solid rgba(0, 0, 0, 0.405);
+}
+
+.loginfrom{
+display: flex;
+flex-direction: column;
+align-items: center;
+width: 80%;
+height: auto;
+}
+.loginbtn{
+    color: #fff;
+    background-color: #FF6600;
+    width: 25vw;
+    height: 7vh;
+    border: solid 2px #FF6600;
+    border-radius: 25px;
+    font-family: "Inria Sans", serif ;
+    font-size: 20px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.266);
+    margin: 30px 0px;
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+
+}
+.loginbtn:hover{
+transform: scale(1.03);
+}
+
+
+.welcomeback{
+    margin: 0px;
+    color: #205375;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+.inputformat{
+    width: 100%;
+    height: 45px;
+    display: flex;
+    flex-direction: column;
+    margin:25px 0px;
+    border-bottom: 2px solid #112B3C;
+
+}
+.inputformat label{
+color: #112B3C;
+font-size: 25px;
+transform: translateY(2px);
+position: absolute;
+padding-left: 50px;
+pointer-events: none;
+transition: .5s;
+
+}
+.inputformat i{
+    font-size: 30px;
+    padding-left: 8px;
+    transform: translateY(5px);
+    position: absolute;
+}
+.inputformat input{
+    background-color:transparent !important;
+    width: 89%;
+    height: 100%;
+    margin-left: 50px;
+    border: none;
+    outline: none;
+    color: #112B3C;
+    font-family: "Inria Sans", serif ;
+   
+    font-size: 20px;
+    
+
+    
+}
+.inputformat input:-webkit-autofill {
+    background-clip: text !important;
+    -webkit-background-clip: text !important;
+  }
+
+.inputformat input:focus~label,.inputformat input:valid~label,
+.inputformat input:not(:placeholder-shown) ~ label{
+  transform: translateY(-20px);
+  font-size: 21px;
+}
+
+.remember-forgot{
+    width: 100%;
+    display: flex;
+    margin: 10px;
+    justify-content: space-between;
+    color: #205375;
+    font-size: 20px;
+}
+.remember-forgot a{
+    text-decoration: none;
+    color: #205375;
+}
+.remember-forgot input{
+    cursor: pointer;
+}
+@media (max-width:480px) {
+   
+    .sidelogo{
+     display: none;
+    } 
+    .loginwrapper{     
+     height: 80vh;
+     width:90vw;
+    }
+    
+    .loginfrom{
+    width: 80%;
+    
+    }
+    .loginbtn{
+        width: 55vw;
+        height: 6vh;
+        border-radius: 30px;
+        margin: 30px 0px;
+    }
+       
+    .welcomeback{
+        margin-bottom: 25px;
+        font-size: 16px;
+    }
+    .inputformat{
+        margin:30px 0px;
+    }
+    .inputformat label{
+    font-size: 20px;
+    transform: translateY(6px);
+    padding-left: 45px;
+    }
+    .inputformat i{
+        font-size: 28px;
+    }
+    .inputformat input{
+        width: 84%;
+        margin-left: 44px;
+        font-size: 18px;
+    }
+    
+    .inputformat input:focus~label,.inputformat input:valid~label,
+    .inputformat input:not(:placeholder-shown) ~ label{
+      transform: translateY(-16px);
+      font-size: 18px;
+    }
+    
+    .remember-forgot{
+        width: 100%;
+        margin-top: 10px;
+        font-size: 16px;
+    }
+    .bottomright{
+        display: none;
+    }
+    .bottomleft{
+        display: none;
+    }
+}
+@media (max-width:720px) and (min-width:481px) {
+   
+    .sidelogo{
+        display: none;
+       }
+    
+    .loginwrapper{     
+     height: 80vh;
+     width:80vw;
+    }
+    
+    .loginfrom{
+    width: 80%;
+    
+    }
+    .loginbtn{
+        width: 50vw;
+        height: 6vh;
+        border-radius: 30px;
+        margin: 30px 0px;
+    }
+
+    .welcomeback{
+        margin-bottom: 10px;
+        font-size: 18px;
+    }
+    .inputformat{
+        margin:30px 0px;
+    }
+    .inputformat label{
+    font-size: 20px;
+    transform: translateY(10px);
+    padding-left: 45px;
+    }
+    .inputformat i{
+        font-size: 28px;
+       transform: translateY(8px);
+
+
+    }
+    .inputformat input{
+        background-color: transparent;
+        width: 85%;
+        margin-left: 45px;
+        font-size: 18px;
+    }
+    
+    .inputformat input:focus~label,.inputformat input:valid~label,
+    .inputformat input:not(:placeholder-shown) ~ label{
+      transform: translateY(-16px);
+      font-size: 18px;
+    }
+    
+    .remember-forgot{
+        width: 100%;
+        margin-top: 10px;
+        font-size: 18px;
+    }
+    .bottomright{
+        display: none;
+    }
+    .bottomleft{
+        display: none;
+    }
+}
+@media (max-width:1024px) and (min-width:721px) {
+    .sidelogo{
+        display: none;
+       }
+    
+    .loginwrapper{     
+     height: 650px;
+     width:70vw;
+    }
+    
+    .loginfrom{
+    width: 80%;
+    
+    }
+    .loginbtn{
+        width: 55vw;
+        height: 55px;
+        border-radius: 30px;
+        margin: 30px 0px;
+        font-size: 24px;
+    }
+  
+       
+    .welcomeback{
+        margin-bottom: 20px;
+        font-size: 20px;
+    }
+    .inputformat{
+        margin:35px 0px;
+    }
+    .inputformat label{
+    font-size: 25px;
+    transform: translateY(5px);
+    padding-left: 45px;
+    }
+    .inputformat i{
+        font-size: 32px;
+    }
+    .inputformat input{
+        background-color: transparent;
+        width: 88%;
+        margin-left: 11%;
+        font-size: 20px;
+    }
+    
+    .inputformat input:focus~label,.inputformat input:valid~label,
+    .inputformat input:not(:placeholder-shown) ~ label{
+      transform: translateY(-20px);
+      font-size: 20px;
+    }
+    
+    .remember-forgot{
+        width: 100%;
+        margin-top: 15px;
+        font-size: 20px;
+    }
+}
+@media (max-width:1366px) and (min-width:1025px){
+    .loginwrapper{
+     height: 80vh;
+     width: 40vw;
+     border-radius:32px;
+    
+    }
+    
+    .loginfrom{
+    width: 80%;
+    
+    }
+    .loginbtn{
+        width: 25vw;
+        height: 7vh;
+        border-radius: 25px;
+        font-size: 20px;
+        margin: 30px 0px;
+    }
+    button:hover{
+    transform: scale(1.03);
+    }
+  
+       
+    .welcomeback{
+        margin: 0px;
+        margin-bottom: 15px;
+        font-size: 20px;
+    }
+    .inputformat{
+        width: 100%;
+        height: 45px;
+        margin:25px 0px;
+    
+    }
+    .inputformat label{
+    font-size: 25px;
+    transform: translateY(2px);
+    padding-left: 50px;
+    }
+    .inputformat i{
+        font-size: 30px;
+        padding-left: 8px;
+        transform: translateY(5px);
+    }
+    .inputformat input{
+        width: 89%;
+        height: 100%;
+        margin-left: 50px;
+        font-size: 20px;
+    }
+    
+    .inputformat input:focus~label,.inputformat input:valid~label,
+    .inputformat input:not(:placeholder-shown) ~ label{
+      transform: translateY(-20px);
+      font-size: 21px;
+    }
+    
+    .remember-forgot{
+        width: 100%;
+        margin: 10px;
+        font-size: 20px;
+    }
+}

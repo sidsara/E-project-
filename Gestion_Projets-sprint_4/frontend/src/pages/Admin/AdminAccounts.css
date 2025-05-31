@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+.addfromcontainer{
+font-family:"Inria Sans", serif;
+
+    width: 100%;
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.addfromcontainer .stepline{
+    padding-bottom: 50px;
+}
+.addfromcontainer .form{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.addfromcontainer .companyinfo{
+    width: 100%;
+    height: 40%;
+    display: flex;
+    margin-bottom: 20px;
+    flex-direction: column;
+}
+.addfromcontainer .companyinfo span{
+color: #ff6000;
+font-size: 16px;
+margin-top: 10px;
+
+}
+.addfromcontainer .companyinfo p{
+    color: #112b3c;
+    font-size: 20px;
+    margin: 10px 0px;
+    }
+.addfromcontainer .companyinfo label{
+        color: #225375;
+        font-size: 16px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+}
+.addfromcontainer .companyinfo input{
+    background-color: #E7E8EB;
+    color: #112b3c;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    height: 40px;
+    padding: 0 1rem;
+    margin-bottom: 20px;
+}
+.addfromcontainer .companyinfo input::placeholder{
+    color: #999999;
+    font-family:"Inria Sans", serif;
+    margin-left: 1rem;
+
+
+}
+.addfromcontainer .companyinfo input:hover,.addfromcontainer .companyinfo input:focus{
+    outline: none;
+    border-color: rgba(255, 96, 0, 0.4);
+    box-shadow: 0 0 0 4px rgba(255, 96, 0, 0.1);
+}
+.addfromcontainer .btns{
+width: 100%;
+height:120px;
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+.addfromcontainer .btns button{
+    border: 1px solid #ff6000;
+    height: 38px;
+    width: 130px;
+    font-size: 17px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-family:"Inria Sans", serif;
+}
+.addfromcontainer .btns .add{
+    background-color: #ff6000;
+    color: #EFEFEF;
+}
+.addfromcontainer .btns .goback{
+    background-color: transparent;
+    color: #ff6000;
+}
+.addfromcontainer .addedsuccesfuly{
+    width: 60%;
+    height: 85%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.addfromcontainer .addedsuccesfuly .endstepline{
+    margin-bottom: 100px;
+    margin-top: 10px;
+}
+.addfromcontainer .addedsuccesfuly h1{
+    color: #ff6000;
+}
+.error{
+    color: red;
+    font-family:"Inria Sans", serif; 
+}
+
+/* Ensure the header is always visible when scrolling */
+.header-container {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #fff; /* Match the background color of the header */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for better visibility */
+}
+
+/* Ensure parent containers do not interfere with sticky positioning */
+.admincontainer {
+    overflow: visible;
+}
+.adminwrapper {
+    overflow: visible;
+}
+
+/* Minimalistic modern UI for the accounts list */
+.accounts-list {
+    max-height: 60vh; /* Limit the height for scrolling */
+    overflow-y: auto;
+    scrollbar-width: none;
+    padding: 10px 0; /* Add vertical padding only */
+    background-color: transparent; /* Transparent background for a clean look */
+}
+
+.accounts-list::-webkit-scrollbar {
+    width: 6px; /* Slim scrollbar */
+}
+
+.accounts-list::-webkit-scrollbar-thumb {
+    background-color: #ff6000; /* Highlight color */
+    border-radius: 3px; /* Rounded scrollbar */
+}
+
+.accounts-list::-webkit-scrollbar-track {
+    background-color: transparent; /* Transparent track */
+}

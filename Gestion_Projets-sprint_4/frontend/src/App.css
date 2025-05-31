@@ -1,0 +1,19 @@
+/* Hide scrollbars for all browsers */
+html, body {
+    overflow: hidden;
+  }
+  
+  /* If you want to allow scrolling but hide the scrollbar */
+  html, body {
+    overflow: auto;
+    scrollbar-width: none; /* Firefox */
+  }
+  
+  body::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Edge */
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  

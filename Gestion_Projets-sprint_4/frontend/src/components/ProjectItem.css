@@ -1,0 +1,562 @@
+@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+.projectlistitemcontainer{
+    margin-bottom:10px ;
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.wrapitemcontainer{
+    height: 36vh;
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.projectswrap{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    min-height: auto;
+}
+.projectlistitemcontainer .projectlistitem .year,.wrapitemcontainer .projectlistitem .year{
+    display: none;
+}
+.projectlistitemcontainer .projectlistitem:hover,.wrapitemcontainer .projectlistitem:hover{
+    outline: none;
+    box-shadow: 0 0 10px rgba(34, 83, 117, 0.1);
+}
+.projectlistitemcontainer .projectlistitem{
+    width: 95%;
+    border-radius: 8px;
+    height: 9vh;
+    display: flex;
+    align-items: center;
+    background-color: #E7E8EB;
+    border: 1px solid #2053757b;
+}
+.wrapitemcontainer .projectlistitem{
+    width: 60%;
+    padding: 0 1.5rem;
+    height: 94%;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    background-color: #E7E8EB;
+    border: 1px solid #2053754c;
+}
+.projectlistitemcontainer .projectlistitem .title{
+    width: 28%;
+    height: 90%;
+    display: flex;
+    align-items: center;
+}
+.wrapitemcontainer .projectlistitem .title{
+    width: 100%;
+    height: 20%;
+    text-align: center;
+   
+}
+.projectlistitemcontainer .projectlistitem .title svg,.wrapitemcontainer .projectlistitem .title svg{
+  
+  display:none;
+}
+.projectlistitemcontainer .projectlistitem .title h2{
+    color: #112b3c;
+    margin-left: 1.5rem;
+    font-size: 20px;
+    font-family:"Inria Sans", serif ;
+
+    
+}
+.wrapitemcontainer .projectlistitem .title h2{
+    color: #112b3c;
+    font-size: 18px;
+    font-family:"Inria Sans", serif ;
+
+    
+}
+.projectlistitemcontainer .projectlistitem .projectdescription{
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    justify-content: center; 
+    padding-right: 1rem;
+    width: 42%;
+    height: 90%;
+}
+.wrapitemcontainer .projectlistitem .projectdescription{
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    width: 100%;
+    height: 40%;
+    margin-bottom: 10px;
+}
+
+.projectlistitemcontainer .projectlistitem .projectdescription span,.wrapitemcontainer .projectlistitem .projectdescription span{
+    display: none;
+}
+.projectlistitemcontainer .projectlistitem .projectdescription p{
+    color: #225375;
+    font-family:"Inria Sans", serif ;
+   font-size: 1rem;
+   white-space: normal;
+   word-break: break-word; /* Ensures long words break */
+   overflow-wrap: break-word;
+
+
+}
+.wrapitemcontainer .projectlistitem .projectdescription p{
+    color: #225375;
+    font-family:"Inria Sans", serif ;
+   font-size: 14px;
+   white-space: normal;
+   word-break: break-word; /* Ensures long words break */
+   overflow-wrap: break-word;
+
+
+}
+.projectlistitemcontainer .projectlistitem .projectsupervisors,.wrapitemcontainer .projectlistitem .projectsupervisors{
+    display: none;
+}
+.projectlistitemcontainer .projectlistitem .projectfile{
+    display: none;
+}
+.projectlistitemcontainer .projectlistitem .buttonss{
+    height: 90%;
+    width: 28%;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+
+.projectlistitemcontainer .projectlistitem .buttonss 
+.validated,.projectlistitemcontainer .projectlistitem .buttonss 
+.refused  {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+.projectlistitemcontainer .projectlistitem .buttonss 
+.addsupervisor  {
+    height: 100%;
+    width: 63%;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+.projectlistitemcontainer .projectlistitem .buttonss 
+.validated button{
+    height: 80%;
+    border: 1px solid #ff6000;
+    border-radius: 8px;
+    font-family:"Inria Sans", serif ;
+    cursor: pointer;
+    transition: 0.5s ease;
+    color: #EFEFEF;
+    background-color: #ff6000;
+    font-size: 18px;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+.projectlistitemcontainer .projectlistitem .buttonss 
+.addsupervisor button{
+    height: 80%;
+    border: 1px solid #ff6000;
+    border-radius: 8px;
+    font-family:"Inria Sans", serif ;
+    cursor: pointer;
+    transition: 0.5s ease;
+    color: #EFEFEF;
+    background-color: #ff6000;
+    font-size: 18px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+
+.projectlistitemcontainer .projectlistitem .buttonss 
+.refused button{
+    height: 80%;
+    border: 1px solid #ff6000;
+    border-radius: 8px;
+    font-family:"Inria Sans", serif ;
+    cursor: pointer;
+    transition: 0.5s ease;
+    color: #ff6000;
+    background-color: transparent;
+    font-size: 18px;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+
+.projectlistitemcontainer .projectlistitem .buttonss 
+.validated svg,.projectlistitemcontainer .projectlistitem .buttonss 
+.refused svg{
+   margin-right: 1rem;
+}
+
+
+.projectlistitemcontainer .projectlistitem .button{
+    height: 90%;
+    width: 44%;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+.projectlistitemcontainer .projectlistitem .button button{
+    border: 1px solid #ff6000;
+    width: 80%;
+    height: 80%;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family:"Inria Sans", serif ;
+    cursor: pointer;
+    transition: 0.5s ease;
+
+    
+}
+
+.projectlistitemcontainer .projectlistitem .button .modify{
+    color:#ff6000 ;
+    background-color: transparent;
+}
+.projectlistitemcontainer .projectlistitem .button button:hover{
+    transform: scale(1.03);
+}
+.projectlistitemcontainer .projectlistitem .button .delete{
+    background-color:#ff6000 ;
+    color:#EFEFEF
+}
+.projectlistitemcontainer .projectlistitem .bywho{
+    display: none;
+}
+.bigprojectlistitemcontainer{
+    height: auto;
+    width: 100%;
+    margin: 10px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}
+.bigprojectlistitemcontainer .projectlistitem{
+    width: 98%;
+    min-height: 65vh;
+    border-radius: 8px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: #E7E8EB;
+    border: 1px solid #2053757b;
+}
+.bigprojectlistitemcontainer .projectlistitem .title{
+    width: 95%;
+    height: 10vh;
+    margin-left: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.bigprojectlistitemcontainer .projectlistitem .title svg{
+    display:block;
+    cursor: pointer;
+  }
+.bigprojectlistitemcontainer .projectlistitem .title h2{
+    color: #112b3c;
+    margin-left: 1rem;
+    font-family:"Inria Sans", serif ;
+
+    
+}
+.bigprojectlistitemcontainer .projectlistitem .projectdescription{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    height: auto;
+    margin-left: 2rem;
+}
+.bigprojectlistitemcontainer .projectlistitem  span{
+    display: block;
+    font-family:"Inria Sans", serif ;
+    font-size: 17px;
+    margin-left: 6px;
+    color: #ff6000;
+}
+.bigprojectlistitemcontainer .projectlistitem .allsides{
+display: flex;
+}
+.bigprojectlistitemcontainer .projectlistitem .projectsupervisors{
+    height: auto;
+    display: block;
+    margin-left: 2rem;
+}
+.bigprojectlistitemcontainer .projectlistitem .projectsupervisors ul,.bigprojectlistitemcontainer .projectlistitem .feild ul{
+    color: #225375;
+   
+}
+.bigprojectlistitemcontainer .projectlistitem .projectsupervisors ul li::marker ,.bigprojectlistitemcontainer .projectlistitem .feild ul li::marker{
+    color:#ff6000; 
+    font-size: 18px; 
+  }
+  .bigprojectlistitemcontainer .projectlistitem .projectfile{
+    display: block;
+    height: auto;
+    width: 22%;
+    margin-left: 2rem;
+}
+.wrapitemcontainer .projectlistitem .projectfile{
+    display: block;
+    height: 20%;
+    width: 100%;
+}
+.wrapitemcontainer .projectlistitem .projectfile button{
+    border: none;
+    border-radius: 8px;
+    height: 45px;
+    width: 100%;
+    display: flex;
+    padding: 0 20px;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 18px;
+    color: #EFEFEF;
+    background-color: #ff6000;
+    font-family:"Inria Sans", serif ;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+.bigprojectlistitemcontainer .projectlistitem .projectfile button{
+   border: 1px solid #ff6000;
+   border-radius: 8px;
+   height: 45px;
+   width: 60%;
+   margin: 15px 10px;
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+   font-size: 18px;
+   color: #EFEFEF;
+   background-color: #ff6000;
+   font-family:"Inria Sans", serif ;
+   transition: 0.5s ease;
+   cursor: pointer;
+}
+.bigprojectlistitemcontainer .projectlistitem .projectfile button:hover,.wrapitemcontainer .projectlistitem .projectfile button:hover{  
+    transform: scale(1.01);
+ }
+.bigprojectlistitemcontainer .projectlistitem .projectdescription p{
+    color: #225375;
+    font-family:"Inria Sans", serif ;
+   font-size: 1rem;
+
+}
+.bigprojectlistitemcontainer .projectlistitem .buttonss{
+    height: 8vh;
+    width: 22%;
+    margin-left: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+.bigprojectlistitemcontainer .projectlistitem .button{
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
+    align-items:center;
+}
+.bigprojectlistitemcontainer .projectlistitem #btn1{
+    margin-left: 1rem;
+}
+.bigprojectlistitemcontainer .projectlistitem .button button{
+    border: 1px solid #ff6000;
+    border-radius: 8px;
+    font-size: 16px;
+    width: 86%;
+    height: 70%;
+    font-family:"Inria Sans", serif ;
+    cursor: pointer;
+    transition: 0.2s ease;
+
+    
+}
+
+.bigprojectlistitemcontainer .projectlistitem .button .modify{
+    color:#ff6000 ;
+    background-color: transparent;
+}
+.bigprojectlistitemcontainer .projectlistitem .button button:hover{
+    transform: scale(1.02);
+}
+.bigprojectlistitemcontainer .projectlistitem .button .delete{
+    background-color:#ff6000 ;
+    color:#EFEFEF
+}
+
+.bigprojectlistitemcontainer .projectlistitem .year{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 4rem;
+    right: 10rem;
+}
+.bigprojectlistitemcontainer .projectlistitem .year p{
+   font-size: 3rem;
+   color: #ff6000;
+   font-family:"Inria Sans", serif ;
+
+}
+.bigprojectlistitemcontainer .projectlistitem .bywho{
+    display: block;
+    color: #112b3c;
+    font-size: 18px;
+    margin-left:2.5rem ;
+    font-family:"Inria Sans", serif ;
+    
+}
+.wrapitemcontainer .projectlistitem .bywho{
+    display: block;
+    color: #112b3c;
+    font-size: 16px;
+    font-family:"Inria Sans", serif ;
+}
+.bigprojectlistitemcontainer .projectlistitem .buttonss 
+.validated,.bigprojectlistitemcontainer .projectlistitem .buttonss 
+.refused  {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+.bigprojectlistitemcontainer .projectlistitem .buttonss 
+.validated button{
+    height: 80%;
+    border: 1px solid #ff6000;
+    border-radius: 8px;
+    font-family:"Inria Sans", serif ;
+    cursor: pointer;
+    transition: 0.5s ease;
+    color: #EFEFEF;
+    background-color: #ff6000;
+    font-size: 18px;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+
+.bigprojectlistitemcontainer .projectlistitem .buttonss
+.refused button{
+    height: 80%;
+    border: 1px solid #ff6000;
+    border-radius: 8px;
+    font-family:"Inria Sans", serif ;
+    cursor: pointer;
+    transition: 0.5s ease;
+    color: #ff6000;
+    background-color: transparent;
+    font-size: 18px;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+.bigprojectlistitemcontainer .projectlistitem .buttonss 
+.addsupervisor button{
+    height: 80%;
+    border: 1px solid #ff6000;
+    border-radius: 8px;
+    font-family:"Inria Sans", serif ;
+    cursor: pointer;
+    transition: 0.5s ease;
+    color: #EFEFEF;
+    background-color: #ff6000;
+    font-size: 18px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+.bigprojectlistitemcontainer .projectlistitem .buttonss 
+.validated svg,.bigprojectlistitemcontainer .projectlistitem .buttonss 
+.refused svg{
+   margin-right: 1rem;
+}
+.bigprojectlistitemcontainer .validatesuccess{
+    width: 100%;
+    margin: 10% 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.bigprojectlistitemcontainer .validatesuccess h1{
+   color: #ff6000;
+   font-family:"Inria Sans", serif ;
+
+}
+.projectlistitemcontainer .projectlistitem .feild,.wrapitemcontainer .projectlistitem .feild{
+
+display: none;
+}
+.bigprojectlistitemcontainer .projectlistitem .feild{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    height: auto;
+    margin-left: 2rem;
+    }
+#reason{
+    background-color: #E7E8EB;
+    width: 86%;
+    margin-bottom: 20px;
+}
+.bigprojectlistitemcontainer .projectlistitem .buttonss .addsupervisor{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 63%;
+    height: 100%;
+}
+.projectlistitemcontainer .choose-project{
+    display: none;
+}
+.wrapitemcontainer .choose-project{
+   height: 50px;
+   width: 100%;
+   margin: 10px 0;
+}
+.bigprojectlistitemcontainer .choose-project{
+    height: 44px;
+    width: 15%;
+    margin: 2px 2.5rem;
+ }
+ .choose-project button{
+    cursor: pointer;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  justify-content: space-around;
+  width:100%;
+  font-family:"Inria Sans", serif ;
+  color: #ff6000;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #ff6000;
+  box-shadow: rgba(0, 0, 0, 0.3);
+  background-color: transparent;
+
+}

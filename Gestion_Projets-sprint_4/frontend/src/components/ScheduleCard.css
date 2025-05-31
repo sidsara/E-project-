@@ -1,0 +1,103 @@
+.schedule-card {
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-radius: 16px;
+    padding: 10px;
+    font-family:"Inria Sans", serif;
+    display: flex;
+    flex-direction: column;
+
+    gap: 8px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.03);
+  }
+  .schedule-card.online{
+    background-color: rgba(255, 102, 0, 0.1); /* make all cards same height */
+
+}
+.schedule-card.onsite {
+    background-color:rgba(32, 83, 117, 0.1);
+}
+  
+  .meeting-type {
+    font-weight: bold;
+    font-size: 16px;
+    padding: 6px 10px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 10px;
+  }
+  
+  .meeting-type.online {
+    background-color: rgba(255, 102, 0, 0.1); /* make all cards same height */
+    color: #ff6000;
+  }
+  
+  .meeting-type.onsite {
+    background-color:rgba(32, 83, 117, 0.1);
+    color: #225375;
+  }
+  
+  .details {
+    font-size: 14px;
+    color: #122b3c;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 0 10px;
+    margin-bottom: 12px;
+  }
+  
+  .details span {
+    font-weight: bold;
+    color: #225375;
+  }
+  
+  .status {
+    font-size: 12px;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 10px;
+    border-radius: 9999px;
+    width: fit-content;
+    color: white;
+    margin: 0 8px;
+    cursor: pointer;
+  }
+  
+  .status.upcoming {
+    background-color: #B4C5D9;
+    color: #225375;
+  }
+  
+  .status.completed {
+    background-color: #A7F3D0;
+    color: #089437;
+  }
+  
+  .status.ongoing {
+    background-color: #FFC8A3;
+    color: #ff6000;
+  }
+  .schedule-status-dropdown {
+    position: absolute;
+    border-radius: 8px;
+    top: 100%;
+    display: flex;
+    flex-direction: column;
+    background: #EFEFEF;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    z-index: 100;
+  }
+  
+  .schedule-status-dropdown div {
+    margin: 5px;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+  
+ 
+  
